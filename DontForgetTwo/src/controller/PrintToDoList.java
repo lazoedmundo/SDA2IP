@@ -25,39 +25,46 @@ public class PrintToDoList {
 
 		case 1:
 
+			// GENERIC TO DO LIST
+			System.out.println("| To Do List  |");
+
+			break;
+		
+		case 2:
+
 			// SORT TO DO LIST BY ASCENDING CREATION DATE
 			System.out.println("| To Do List sorted by Ascending Creation Date |");
 
 			break;
 
-		case 2:
+		case 3:
 
 			// SORT TO DO LIST BY DESCENDING CREATION DATE
 			System.out.println("| To Do List sorted by Descending Creation Date |");
 
 			break;
 
-		case 3:
+		case 4:
 
 			// SORT TO DO LIST BY ASCENDING DUE DATE
 			System.out.println("| To Do List sorted by Ascending Due Date |");
 
 			break;
-		case 4:
+		case 5:
 
 			// SORT TO DO LIST BY DESCENDING DUE DATE
 			System.out.println("| To Do List sorted by Descending Due Date |");
 
 			break;
 
-		case 5:
+		case 6:
 
 			// SORT TO DO LIST BY COMPLETE STATUS
 			System.out.println("| To Do List sorted by Complete Status |");
 
 			break;
 
-		case 6:
+		case 7:
 
 			// SORT TO DO LIST BY UNCOMPLETE STATUS
 			System.out.println("| To Do List sorted by uncomplete Status |");
