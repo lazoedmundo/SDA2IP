@@ -29,7 +29,7 @@ public class PrintToDoList {
 			System.out.println("| To Do List  |");
 
 			break;
-		
+
 		case 2:
 
 			// SORT TO DO LIST BY ASCENDING CREATION DATE
@@ -81,20 +81,35 @@ public class PrintToDoList {
 		int index1 = 0;
 		for (Task showList : ManageToDoList.newToDoList.getToDoList()) {
 			index1 = index1 + 1;
-			System.out.println(index1 + "   " + showList.getTaskName() + "               "
-					+ showList.getTaskCreationDate() + "               " + showList.getTaskDueDate() + "               "
-					+ showList.getTaskDuration() + "               " + showList.getTaskStatus());
+
+//			//System.out.format("%1d%16s", index1, showList.getTaskName(), System.out.println(",
+//					showList.getTaskDueDate(), showList.getTaskDuration(), showList.getTaskStatus());
+//			//System.out.println(index1 + "   " + showList.getTaskName() + "               "
+//					+ showList.getTaskCreationDate() + "               " + showList.getTaskDueDate() + "               "
+//					+ showList.getTaskDuration() + "               " + showList.getTaskStatus());
+			
+			System.out.println("-----------------------------------------------------------");
+			System.out.println("Task Id = " + index1);
+			System.out.println("Task Name = " + showList.getTaskName());
+			System.out.println("Task Creation Date = " + showList.getTaskCreationDate());
+			System.out.println("Task Due Date = " + showList.getTaskDueDate());
+			System.out.println("Task Duration [days] = " + showList.getTaskDuration());
+			System.out.println("Task Status = " + showList.getTaskStatus());
+			System.out.println("-----------------------------------------------------------");
+			System.out.println("");
+		
+		
 		}
 
 	}
 
-	
 	public static void printCompleteTaskPercentage(ToDoList completePercentagePrint) {
-		
-		DecimalFormat dec = new DecimalFormat("#0"/*"#0.00" es para 2 decimales*/);
-				
+
+		DecimalFormat dec = new DecimalFormat("#0"/* "#0.00" es para 2 decimales */);
+
 		System.out.println("List Name = " + ManageToDoList.newToDoList.getToDoListName());
-		System.out.println("Percentage of Tasks complete = " + dec.format(StatsToDoList.getPercentagecompleteTasks()) + " % ");
+		System.out.println(
+				"Percentage of Tasks complete = " + dec.format(StatsToDoList.getPercentagecompleteTasks()) + " % ");
 
 	}
 

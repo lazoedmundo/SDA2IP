@@ -19,14 +19,14 @@ public class ManageToDoList {
 
 	}
 
-	// CREATE TO DO LIST METHOD
+	// METHOD TO CREATE TO DO LIST
 
-	public void addToDoList(String toDoListName) {
+	public void createToDoList(String toDoListName) {
 
 		newToDoList = new ToDoList(toDoListName);
 	}
 
-	// CHANGE TO DO LIST NAME
+	// METHOD THAT CHANGE TO DO LIST NAME
 
 	public void changeNewToDoListName(String toDoListName) {
 
@@ -99,9 +99,8 @@ public class ManageToDoList {
 			break;
 				
 		}
-		
-		
-		newToDoList.getToDoList().get(index).isTaskComplete(taskStatus);
+				
+		newToDoList.getToDoList().get(index-1).isTaskComplete(taskStatus);
 
 	}
 

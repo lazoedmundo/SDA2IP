@@ -50,7 +50,7 @@ public class TestVariables {
 		System.out.println("Test 4");
 		System.out.println("");
 		controller.ManageToDoList manageTo1 = new controller.ManageToDoList();
-		manageTo1.addToDoList("Varios");
+		manageTo1.createToDoList("Varios");
 		manageTo1.addTaskToNewToDoList("leer", 2017, 11, 29, 21, 13, 0);
 		manageTo1.getNewToDoList();
 		manageTo1.addTaskToNewToDoList("programar", 2017, 11, 18, 21, 13, 0);

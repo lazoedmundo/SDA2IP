@@ -12,7 +12,7 @@ import java.util.Locale;
 import controller.StatusOfTask;
 
 /**
- * @author ELL
+ * @author Edmundo Lazo
  * Class for Tasks in ToDoList 
  */
 public class Task {
@@ -56,7 +56,7 @@ public class Task {
 
 	
 	/**
-	 * Getter method that returns the Task Name
+	 * Getter method that returns the Task Creation Date
 	 * @return
 	 */
 	public LocalDateTime getTaskCreationDate() {
@@ -108,13 +108,5 @@ public class Task {
 	public StatusOfTask getTaskStatus() {
 		return taskStatus;
 	}
-
-	//public void showStatus() {
-		//if (taskStatus == true) {
-		//	System.out.println("Task Status = Complete ");
-		//} else {
-		//	System.out.println("Task Status = Uncomplete ");
-		//}
-	//}
 
 }

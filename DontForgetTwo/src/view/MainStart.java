@@ -43,9 +43,12 @@ public class MainStart {
 		System.out.println("|-------------------------------------------------------------------|");
 		System.out.println("");
 
-		while (true) {
+		boolean logingOption = true;
+
+		while (logingOption) {
 
 			boolean validUser = false;
+			int exitOption = 1;
 
 			while (!validUser) {
 
@@ -59,27 +62,62 @@ public class MainStart {
 				System.out.println("Please Select One Option to Start DONTFORGET2 : ");
 				System.out.println("Type <C> to Create a New User");
 				System.out.println("Type <L> to Login with as an Existing User");
+				System.out.println("Type <X> to Exit DONTFORGET2 To Do List");
+
+				System.out.println("");
 
 				String keyboardInputOption = scanner.nextLine();
 
 				if (keyboardInputOption.toUpperCase().trim().equals("C")) {
 
 					validUser = userLoginView.createNewUser();
+					exitOption = 1;
 
 				} else if (keyboardInputOption.toUpperCase().trim().equals("L")) {
 
 					validUser = userLoginView.loginUser();
+					exitOption = 1;
+
+				} else if (keyboardInputOption.toUpperCase().trim().equals("X")) {
+
+					validUser = true;
+					exitOption = 2;
 
 				} else {
 					System.out.println("Invalid Option Entered!!");
 				}
-
 			}
 
-			if (validUser) {
-				// inputUser = userLoginView.getinputUser();
-				toDoListMainMenu();
+			if (exitOption == 1) {
+
+				System.out.println("");
+				System.out.println("Please Select One Option to Continue: ");
+				System.out.println("Type <G> to Go to To Do List Main Menu");
+				System.out.println("Type <X> to Exit DONTFORGET2 To Do List");
+				System.out.println("");
+
+				String keyboardInputOption = scanner.nextLine();
+
+				if (keyboardInputOption.toUpperCase().trim().equals("G")) {
+
+					toDoListMainMenu();
+
+				} else if (keyboardInputOption.toUpperCase().trim().equals("X")) {
+
+					logOutMessage();
+
+					logingOption = false;
+
+				}
 			}
+		
+			else {
+				
+				logOutMessage();
+				logingOption = false;
+				
+			}
+		
 		}
 	}
 
@@ -95,13 +133,13 @@ public class MainStart {
 			System.out.println("|                                                                   |");
 			System.out.println("|-------------------------------------------------------------------|");
 
-			
 			System.out.println("");
 
 			System.out.println("Please Enter An Option: ");
 			System.out.println("Type <C> to Create a To Do List");
-			System.out.println("Type <N> to Change Name of To Do List");
-			System.out.println("Type <X> to Exit DONTFORGET2");
+			//System.out.println("Type <N> to Change Name of To Do List");
+			System.out.println("Type <E> Edit existing To Do List");
+			System.out.println("Type <G> to Go to Login Menu");
 			System.out.println("");
 			String keyboardInput = scanner.nextLine();
 
@@ -109,11 +147,12 @@ public class MainStart {
 
 				manageToDoListView.createToDoListView();
 
-			} else if (keyboardInput.toUpperCase().trim().equals("N")) {
+			//The value was "N"
+			} else if (keyboardInput.toUpperCase().trim().equals("E")) {
 
 				manageToDoListView.changeToDoListNameView();
 
-			} else if (keyboardInput.toUpperCase().trim().equals("X")) {
+			} else if (keyboardInput.toUpperCase().trim().equals("G")) {
 
 				loop = "EXIT";
 
@@ -123,7 +162,10 @@ public class MainStart {
 
 		}
 
-		System.out.println("");
+	}
+
+	private void logOutMessage() {
+
 		System.out.println("|-------------------------------------------------------------------|");
 		System.out.println("|                                                                   |");
 		System.out.println("|       Thanks for using DONTFORGET2 To Do List!!!                  |");
@@ -131,7 +173,6 @@ public class MainStart {
 		System.out.println("|                  See you soon !!! :-)                             |");
 		System.out.println("|                                                                   |");
 		System.out.println("|-------------------------------------------------------------------|");
-		System.out.println("");
 
 	}
 
