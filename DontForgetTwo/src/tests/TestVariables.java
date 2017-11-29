@@ -15,6 +15,7 @@ public class TestVariables {
 		System.out.println("");
 		Task task1 = new Task("Manejar");
 		task1.showTaskName();
+		
 		task1.getTaskCreationDate();
 		task1.showTaskCreationDate();
 		task1.setTaskDueDateTime(2017, 11, 30, 22, 30, 15);
@@ -75,7 +76,7 @@ public class TestVariables {
 		System.out.println("");
 		
 		manageTo1.changeStatusOfTask(2,StatusOfTask.COMPLETE);
-		manageTo1.changeStatusOfTask(0, StatusOfTask.COMPLETE);
+		manageTo1.changeStatusOfTask(1, StatusOfTask.COMPLETE);
 		manageTo1.sortNewToDoListByUncompleteStatus();
 		System.out.println("");
 		
@@ -87,7 +88,7 @@ public class TestVariables {
 		System.out.println("");
 		
 		
-		manageTo1.changeStatusOfTask(0, StatusOfTask.COMPLETE);
+		manageTo1.changeStatusOfTask(1, StatusOfTask.COMPLETE);
 		manageTo1.sortNewToDoListByCompleteStatus();
 		
 		System.out.println("");
@@ -110,7 +111,7 @@ public class TestVariables {
 		System.out.println("");
 		
 		
-		manageTo1.printPercetageTaskStatus();
+		manageTo1.printPercentageTaskStatus();
 		System.out.println("");
 		
 		System.out.println("Test 11");

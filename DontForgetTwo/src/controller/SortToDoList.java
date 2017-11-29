@@ -7,24 +7,43 @@ import java.util.Comparator;
 import model.Task;
 import model.ToDoList;
 
+/**
+ * 
+ * SortToDoList - This class is responsible of the following functions: create comparator for the different sorting methods, and get the parameters for all the sorting methods
+ * 
+ * @author ELL
+ *
+ */
 public class SortToDoList {
 
 	// FIELDS
 
 	// CONSTRUCTOR
 
+	/**
+	 *  This class does not require to initialize fields
+	 */
 	public SortToDoList() {
 
 	}
 
 	// SORT TO DO LIST BY CREATION DATE ASCENDING
 
+	/**
+	 * 
+	 * Method that receives a ToDoList as parameter to sort the To Do List by ascending creation date
+	 * 
+	 * @param toDoListToSort
+	 */
 	public static void sortListByCreationDateAscending(ToDoList toDoListToSort) {
 
 		Collections.sort(toDoListToSort.getToDoList(), CreationDateAscendingComparator);
 
 	}
 
+	/**
+	 * Method that is used for the manual testing
+	 */
 	public void showListByCreationDateAscending() {
 
 		System.out.println("| To Do List sorted by Ascending Creation Date |");
@@ -39,6 +58,13 @@ public class SortToDoList {
 
 	// SORT TO DO LIST BY CREATION DATE DESCENDING
 
+	/**
+	 * 
+	 * Method that receives a ToDoList as parameter to sort the To Do List by descending creation date
+
+	 * 
+	 * @param toDoListToSort
+	 */
 	public static void sortListByCreationDateDescending(ToDoList toDoListToSort) {
 
 		Collections.sort(toDoListToSort.getToDoList(), CreationDateDescendingComparator);
@@ -60,12 +86,21 @@ public class SortToDoList {
 
 	// SORT TO DO LIST BY DUE DATE ASCENDING
 
+	/**
+	 * 
+	 * Method that receives a ToDoList as parameter to sort the To Do List by ascending due date
+	 * 
+	 * @param toDoListToSort
+	 */
 	public static void sortListByDueDateAscending(ToDoList toDoListToSort) {
 
 		Collections.sort(toDoListToSort.getToDoList(), DueDateAscendingComparator);
 
 	}
 
+	/**
+	 * Method that is used for the manual testing
+	 */
 	public void showListByDueDateAscending() {
 
 		System.out.println("| To Do List sorted by Ascending Due Date |");
@@ -79,6 +114,12 @@ public class SortToDoList {
 
 	// SORT TO DO LIST BY DUE DATE DESCENDING
 
+	/**
+	 * 
+	 * Method that receives a ToDoList as parameter to sort the To Do List by descending due date
+	 * 
+	 * @param toDoListToSort
+	 */
 	public static void sortListByDueDateDescending(ToDoList toDoListToSort) {
 
 		Collections.sort(toDoListToSort.getToDoList(), DueDateDescendingComparator);
@@ -86,6 +127,12 @@ public class SortToDoList {
 
 	// SORT TO DO LIST BY COMPLETE STATUS
 
+	/**
+	 * 
+	 * Method that receives a ToDoList as parameter to sort the To Do List by complete status
+	 * 
+	 * @param toDoListToSort
+	 */
 	public static void sortListByCompleteStatus(ToDoList toDoListToSort) {
 
 		Collections.sort(toDoListToSort.getToDoList(), CompleteTaskStatusComparator);
@@ -94,12 +141,22 @@ public class SortToDoList {
 
 	// SORT TO DO LIST BY UNCOMPLETE STATUS
 
+	/**
+	 * 
+	 * Method that receives a ToDoList as parameter to sort the To Do List by incomplete status
+
+	 * 
+	 * @param toDoListToSort
+	 */
 	public static void sortListByUncompleteStatus(ToDoList toDoListToSort) {
 
 		Collections.sort(toDoListToSort.getToDoList(), UncompleteTaskStatusComparator);
 
 	}
 
+	/**
+	 * Method that is used for the manual testing
+	 */
 	public void showListByUncompleteStatus() {
 
 		System.out.println("| To Do List sorted by Uncomplete Status |");

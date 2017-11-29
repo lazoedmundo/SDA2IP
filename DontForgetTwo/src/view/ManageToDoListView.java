@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import controller.ManageToDoList;
 import controller.PrintToDoList;
+import controller.SortToDoList;
 import controller.StatusOfTask;
 
 public class ManageToDoListView {
@@ -62,7 +63,7 @@ public class ManageToDoListView {
 			System.out.println("Type <3> to Change the Task Status");
 			System.out.println("Type <4> to Print Menu");
 			System.out.println("Type <5> to Show the To DO List complete Percentage [%]");
-			System.out.println("Type <6> to Exit DONTFORGET2");
+			System.out.println("Type <6> to To Do Lsit Main Menu");
 			System.out.println("");
 
 			int keyboardInput = scanner.nextInt();
@@ -201,23 +202,23 @@ public class ManageToDoListView {
 			case 1:
 
 				System.out.println("");
-				PrintToDoList.printToDoList(manageToDoList.getNewToDoList(), 2);
-
+				manageToDoList.sortNewToDoListAscendingCreationDate();
+				
 				break;
 
 			// Print To Do List by Descending Creation Date
 			case 2:
 
 				System.out.println("");
-				PrintToDoList.printToDoList(manageToDoList.getNewToDoList(), 3);
-
+				manageToDoList.sortNewToDoListDescendingCreationDate();
+				
 				break;
 
 			// Print To Do List by Ascending Due Date
 			case 3:
 
 				System.out.println("");
-				PrintToDoList.printToDoList(manageToDoList.getNewToDoList(), 4);
+				manageToDoList.sortNewToDoListAscendingDueDate(); 
 
 				break;
 
@@ -225,7 +226,7 @@ public class ManageToDoListView {
 			case 4:
 
 				System.out.println("");
-				PrintToDoList.printToDoList(manageToDoList.getNewToDoList(), 5);
+				manageToDoList.sortNewToDoListDescendingDueDate();
 
 				break;
 
@@ -233,7 +234,7 @@ public class ManageToDoListView {
 			case 5:
 
 				System.out.println("");
-				PrintToDoList.printToDoList(manageToDoList.getNewToDoList(), 6);
+				manageToDoList.sortNewToDoListByCompleteStatus();
 
 				break;
 
@@ -241,7 +242,7 @@ public class ManageToDoListView {
 			case 6:
 
 				System.out.println("");
-				PrintToDoList.printToDoList(manageToDoList.getNewToDoList(), 7);
+				manageToDoList.sortNewToDoListByUncompleteStatus();
 
 				break;
 
