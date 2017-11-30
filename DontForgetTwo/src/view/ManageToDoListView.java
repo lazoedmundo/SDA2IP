@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import controller.ManageToDoList;
 import controller.PrintToDoList;
-import controller.SortToDoList;
 import controller.StatusOfTask;
 
 public class ManageToDoListView {
@@ -90,7 +89,16 @@ public class ManageToDoListView {
 				int minute = scanner.nextInt();
 				System.out.println("");
 
-				manageToDoList.addTaskToNewToDoList(taskName, year, month, day, hour, minute, 0);
+				
+				
+				try {
+					manageToDoList.addTaskToNewToDoList(taskName, year, month, day, hour, minute, 0);
+				} catch (Exception e) {
+					
+					System.out.println("Value of Date is out of bounds!!!");
+					e.printStackTrace();
+					
+				}
 
 				break;
 
@@ -123,7 +131,7 @@ public class ManageToDoListView {
 				System.out.println("Please enter the Task Id:");
 				System.out.println("");
 				int taskId1 = scanner.nextInt();
-				System.out.println("Please enter the Task New status (COMPLETE or UNCOMPLETE:");
+				System.out.println("Please enter the Task New status (COMPLETE or INCOMPLETE:");
 				System.out.println("");
 
 				StatusOfTask statusOfTask = StatusOfTask.valueOf(scanner.next().toUpperCase().trim());
@@ -238,7 +246,7 @@ public class ManageToDoListView {
 
 				break;
 
-			// Print To Do List by Uncomplete Status
+			// Print To Do List by Incomplete Status
 			case 6:
 
 				System.out.println("");
